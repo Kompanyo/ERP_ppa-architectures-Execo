@@ -170,6 +170,7 @@ footer strong,body>footer strong{font-size:clamp(3.5rem,7vw,6.5rem);line-height:
 @media(max-width:1050px){.staffing-heading{grid-template-columns:1fr}.cpt-phase-card{grid-template-columns:120px repeat(3,1fr)}.cpt-phase-card>small{grid-column:1/-1}.staffing-screen>footer{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.staffing-screen>header,.staffing-kpis,.staffing-screen>footer{grid-template-columns:1fr}.staffing-screen>header>div,.staffing-kpis>div,.staffing-screen>footer>*{border-right:0;border-bottom:1px solid #c8cbc6}.staffing-phases article>header{grid-template-columns:70px 1fr}.staffing-phases article>header small{grid-column:1/-1;text-align:left}.staffing-assignment{grid-template-columns:1fr 1fr}.staffing-assignment>*{border-bottom:1px solid #e2e3df}.cpt-phase-card{grid-template-columns:1fr 1fr}.cpt-phase-card>header,.cpt-phase-card>small{grid-column:1/-1}.cpt-phase-card .metric.value{grid-column:1/-1}}
 
+
 /* Cycle animé du dossier projet. */
 .project-flow{background:#0c1625;color:#f7f8f8;overflow:hidden}
 .erp-solution{background:#e8e9e5;color:#17191b}.solution-embed{margin-top:42px;background:#0e1823;overflow:hidden}.solution-frame{display:block;width:100%;height:485px;border:0;background:#0e1823}
@@ -741,6 +742,25 @@ main>section[id]{scroll-margin-top:72px}
   .data-natures{gap:5px;margin-top:14px;padding:5px}
   .data-natures div{min-height:0;padding:12px}
   .data-natures span{margin-top:6px}
+}
+
+/* Sur téléphone, chaque phase devient une fiche verticale : les trois grandeurs
+   conservent la même largeur et la même échelle, sans texte comprimé. */
+@media(max-width:620px){
+	.cpt-phases{padding:18px 14px}
+	.cpt-phases>header p{margin-top:12px;font-size:1rem;line-height:1.5}
+	.cpt-phase-graphic{gap:10px;margin-top:20px}
+	.cpt-phase-card{display:grid;grid-template-columns:1fr;gap:14px;padding:18px 16px;border-left-width:4px}
+	.cpt-phase-card>header{grid-column:auto;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center}
+	.cpt-phase-card>header strong{font-size:1.3rem}
+	.cpt-phase-card>header span{font-size:.95rem;text-align:right}
+	.cpt-phase-card>header b{grid-column:1/-1;margin-top:5px;padding:6px 9px;font-size:.9rem}
+	.cpt-phase-card .metric,.cpt-phase-card .metric.value{grid-column:auto;display:grid;grid-template-columns:1fr auto;gap:7px 14px;width:100%}
+	.cpt-phase-card .metric span{font-size:.9rem;line-height:1.3}
+	.cpt-phase-card .metric b{font-size:1rem;line-height:1.3}
+	.cpt-phase-card .metric i{height:8px}
+	.cpt-phase-card>small{grid-column:auto;font-size:.9rem;line-height:1.5}
+	.cpt-data-note{padding:13px 14px;font-size:.9rem;line-height:1.5}
 }
 
 </style>
